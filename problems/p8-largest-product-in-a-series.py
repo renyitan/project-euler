@@ -39,6 +39,7 @@ def run():
             if right >= len(digits)-1:
                 break
             continue
+
         if (right-left+1) > window:
             current /= digits[left]
             left += 1
