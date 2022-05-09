@@ -36,7 +36,7 @@ def run():
             current = 1
             right += 1
             left = right
-            if right > len(digits)-1:
+            if right >= len(digits)-1:
                 break
             continue
         if (right-left+1) > window:
