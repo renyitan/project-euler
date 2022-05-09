@@ -39,4 +39,3 @@ def get_num_divisors(n):
 
 if __name__ == "__main__":
     print(run())
-    # print(get_num_divisors(100))
