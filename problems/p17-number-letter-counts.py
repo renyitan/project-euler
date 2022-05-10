@@ -54,15 +54,15 @@ def get_number_letter(n):
     Returns the english words for number, n
     Example: 120 => "one hundred and twenty"
     """
-    chars = [ch for ch in str(n)]
+    digits = [int(ch) for ch in str(n)]
     tenths = 1
     res = []
 
-    while chars:
-        digit = int(chars.pop())
+    while digits:
+        digit = digits.pop()
         # check for special case where it's [10 - 19]
-        if tenths == 1 and chars and int(chars[-1]) == 1:
-            next = int(chars.pop())
+        if tenths == 1 and digits and digits[-1] == 1:
+            next = digits.pop()
             digit += next*10
             res.append(dict[digit])
             tenths *= 100
@@ -76,7 +76,7 @@ def get_number_letter(n):
                 res.append('and')
             res.append('hundred')
             res.append(dict[digit])
-        elif tenths == 1000:
+        elif tenths == 1000 and digit != 0:
             if res:
                 res.append('and')
             res.append('thousand')
