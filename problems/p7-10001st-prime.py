@@ -1,3 +1,9 @@
+"""
+Problem 7 - 10001st Prime
+
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+What is the 10001st prime number?
+"""
 import math
 
 
@@ -5,10 +11,11 @@ def run():
     target = 10001
     # determine upper_bound, N that contains nth prime
     upper_bound = math.ceil(target*math.log(target*math.log(target)))
+    # use Sieve of Eratosthenes to find nth prime
     res = sieve(upper_bound)
     return res[target-1]
 
-# use Sieve of Eratosthenes to find nth prime
+
 def sieve(upper_bound):
     prime = [True for i in range(upper_bound+1)]
     prime[0] = False

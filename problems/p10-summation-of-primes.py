@@ -4,6 +4,15 @@ def run():
     return sieve_and_sum(n)
 
 
+"""
+Problem 10 - Summation of primes
+
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+Find the sum of all the primes below two million.
+
+"""
+
+
 def sieve_and_sum(n):
     prime = [True for _ in range(n+1)]
     p = 2

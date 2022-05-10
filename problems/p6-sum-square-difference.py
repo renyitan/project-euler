@@ -1,3 +1,10 @@
+"""
+Problem 6 - Sum square difference
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+"""
+
+
 def run():
     # sum of squares, and sum
     sum_sq, sum = 0, 0
