@@ -5,7 +5,7 @@ https://www.geeksforgeeks.org/sieve-of-eratosthenes/
 """
 
 
-def eratosthenes(n):
+def eratosthenes(n: int) -> list[int]:
     # create boolean array and assume all values are prime
     prime = [True for _ in range(n+1)]
     p = 2
@@ -17,5 +17,5 @@ def eratosthenes(n):
             for i in range(p*p, n+1, p):
                 prime[i] = False
         p += 1
-    
+
     return [i for i, is_prime in enumerate(prime) if is_prime and i >= 2]

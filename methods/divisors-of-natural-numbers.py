@@ -5,7 +5,7 @@ https://www.geeksforgeeks.org/find-divisors-natural-number-set-1/
 import math
 
 
-def get_divisors(n):
+def get_divisors(n: int) -> list[int]:
     divisors = []
     i = 1
     while (i <= math.sqrt(n)):
