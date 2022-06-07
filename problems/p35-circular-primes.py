@@ -40,8 +40,8 @@ def run():
             if is_circular:
                 circular_primes.add(n)
     return len(circular_primes)
-    
-    
+
+
 def reverse(digits, start, end):
     while start < end:
         digits[start], digits[end] = digits[end], digits[start]
@@ -54,7 +54,6 @@ def rotate(digits, k=1):
     reverse(digits, 0, n-1)
     reverse(digits, 0, k-1)
     reverse(digits, k, n-1)
-    
 
 
 if __name__ == "__main__":
