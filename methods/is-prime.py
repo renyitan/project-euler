@@ -20,7 +20,3 @@ def is_prime(n: int) -> list[int]:
             return False
         i += 6
     return True
-
-
-if __name__ == "__main__":
-    print(is_prime(87178291199))

@@ -5,7 +5,7 @@ https://www.geeksforgeeks.org/sieve-of-eratosthenes/
 """
 
 
-def eratosthenes(n: int) -> List[int]:
+def sieve(n: int) -> list[int]:
     # create boolean array and assume all values are prime
     prime = [True for _ in range(n+1)]
     p = 2
