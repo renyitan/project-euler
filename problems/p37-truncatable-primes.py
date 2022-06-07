@@ -1,10 +1,15 @@
 """
-[Problem Title]
+Problem 37 - Truncatable Primes
 
-[Problem Description]
+The number 3797 has an interesting property. Being prime itself, it is possible to continuously remove digits from left to right, and remain prime at each stage: 3797, 797, 97, and 7. Similarly we can work from right to left: 3797, 379, 37, and 3.
+
+Find the sum of the only eleven primes that are both truncatable from left to right and right to left.
+
+NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 """
 import math
 from collections import deque
+
 
 def is_prime(n: int) -> list[int]:
     if n <= 3:
@@ -37,11 +42,11 @@ def run():
                 left_copy.pop()
                 if len(left_copy) == 0:
                     break
-                
+
                 if not is_prime(int("".join(left_copy))):
                     is_trunc = False
                     break
-            
+
             # remove right elements
             right_copy = digits.copy()
             while len(right_copy) > 0:
@@ -54,10 +59,9 @@ def run():
 
             if is_trunc:
                 res.append(n)
-        n+=1
+        n += 1
 
     return sum(res)
-
 
 
 if __name__ == "__main__":
